@@ -9,16 +9,22 @@
 %
 % See the file doc/licenses/LICENSE for more details.
 
-\mode<presentation>
-
 \setbeamercolor*{author in head/foot}{parent=palette tertiary}
 \setbeamercolor*{title in head/foot}{parent=palette tertiary}
 \setbeamercolor*{date in head/foot}{parent=palette tertiary}
-
 \setbeamercolor*{section in head/foot}{parent=palette tertiary}
 \setbeamercolor*{subsection in head/foot}{parent=palette tertiary}
 
+\DeclareOptionBeamer{lang}{\def\beamer@HTW@lang{#1}}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
 \setbeamertemplate{page number in head/foot}[totalframenumber]%
+
+\defbeamertemplate{multilangpage}{de}{Seite}
+\defbeamertemplate{multilangpage}{en}{Page}
+\setbeamertemplate{multilangpage}[\beamer@HTW@lang]
 
 
 \defbeamertemplate*{footline}{HTW}
@@ -26,20 +32,20 @@
   \leavevmode%
   \hrule
   \hbox{%
-  \begin{beamercolorbox}[wd=21.87mm,ht=3.28mm,dp=1ex,sep=0.66mm,leftskip=1.91mm]{author in head/foot}%
-    \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\ifblank\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+  \begin{beamercolorbox}[wd=21.87mm,ht=3.28mm,dp=0.76mm,sep=0.2mm,leftskip=1.91mm]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\strut\insertshortauthor\expandafter\ifblank\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
   \end{beamercolorbox}%
   \rule{0.378pt}{3.28mm}
-  \begin{beamercolorbox}[wd=70.4mm,ht=3.28mm,dp=1ex,sep=0.66mm,leftskip=1.91mm]{title in head/foot}%
-    \usebeamerfont{title in head/foot}\insertshorttitle
+  \begin{beamercolorbox}[wd=70.4mm,ht=3.28mm,sep=0.2mm,leftskip=1.91mm]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\strut\insertshorttitle
   \end{beamercolorbox}%
   \rule{0.378pt}{3.28mm}
-  \begin{beamercolorbox}[wd=18.14mm,ht=3.28mm,dp=1ex,sep=0.66mm,leftskip=1.91mm]{date in head/foot}%
-    \usebeamerfont{date in head/foot}\insertshortdate{} %\hspace*{2em}
+  \begin{beamercolorbox}[wd=18.14mm,ht=3.28mm,sep=0.2mm,leftskip=1.91mm]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\strut\insertshortdate{} %\hspace*{2em}
   \end{beamercolorbox}%
   \rule{0.378pt}{3.28mm}
-  \begin{beamercolorbox}[wd=17.59mm,ht=3.28mm,dp=1ex,sep=0.66mm,leftskip=1.91mm]{page in head/foot}%
-    \usebeamerfont{page number in head/foot}Seite \insertframenumber
+  \begin{beamercolorbox}[wd=17.59mm,ht=3.28mm,sep=0.2mm,leftskip=1.91mm]{page in head/foot}%
+    \usebeamerfont{page number in head/foot}\strut\usebeamertemplate{multilangpage} \insertframenumber
     % \usebeamerfont{page number in head/foot}\insertpagenumber{} %\hspace*{2em} 
   \end{beamercolorbox}}%
   %\vskip0pt%

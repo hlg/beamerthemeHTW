@@ -1,4 +1,4 @@
-This is a beamer theme for [Dresden University of Applied Sciences](http://htw-dresden.de).
+This is a beamer theme for [Dresden University of Applied Sciences](https://www.htw-dresden.de).
 Lots of improvements can be made, it does not implement the full CD and only 4:3 ratio presentations currently.
  
 How to install template

@@ -15,5 +15,5 @@ TODO
 Example
 -----------
 
-The example is defined with markdown and converted to pdf with [Pandoca](http://pandoc.org/). A native latex example is still to be made.
+The example is defined with markdown and converted to pdf with [Pandoc](http://pandoc.org/). A native latex example is still to be made.
 

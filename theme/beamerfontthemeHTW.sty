@@ -11,10 +11,10 @@
 
 \mode<presentation>
 
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+% beamer normal size default 11pt
+% HTWD 18pt normal = 9pt = beamer footnotesize which is too small!
+% slide heading 30pt, 24pt for two lines
 
-% tiny is 5pt, original is 4.03 pt, but that is really small
 \setbeamerfont{title in head/foot}{size=\tiny}
 \setbeamerfont{author in head/foot}{size=\tiny}
 \setbeamerfont{institute in head/foot}{size=\tiny}
@@ -23,12 +23,15 @@
 \setbeamerfont{section in head/foot}{size=\tiny}
 \setbeamerfont{subsection in head/foot}{size=\tiny}
 \setbeamerfont{subsubsection in head/foot}{size=\tiny}
-\setbeamerfont{frametitle}{size=\normalsize, series=\bfseries}
+\setbeamerfont{frametitle}{size=\normalsize, series=\bfseries} 
 \setbeamerfont{block title}{size=\normalsize, series=\bfseries, parent={structure,block body}}
 \setbeamerfont{section name}{size=\normalsize, series=\bfseries}
 \setbeamerfont{section title}{size=\normalsize, series=\bfseries}
 \setbeamerfont{subsection name}{size=\normalsize, series=\bfseries}
 \setbeamerfont{subsection title}{size=\normalsize, series=\bfseries}
+\setbeamerfont{title}{size=\Large, series=\fontseries{sb}} % Large 14.4 pt, LARGE 17.28 pt, we need 16 pt
+\setbeamerfont{author}{size=\normalsize, series=\fontseries{m}} % series regular 
+\setbeamerfont{date}{size=\normalsize, series=\normalfont} % series regular \normalfont
 \setbeamerfont{footline}{parent=tiny}
 
 

@@ -25,26 +25,34 @@
 
 \defbeamertemplate*{footline}{HTW}
 {%
+  \ifnum \theframenumber=1
+    % no footline on title frame
+  \vspace{-37mm}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=36.7mm,center]{palette secondary}
+  \end{beamercolorbox}
+    
+  \else
   \leavevmode%
-  \hrule
+  % \hrule
   \hbox{%
   \begin{beamercolorbox}[wd=21.87mm,ht=3.28mm,dp=0.76mm,sep=0.2mm,leftskip=1.91mm]{}%
     \usebeamerfont{author in head/foot}\strut\insertshortauthor\expandafter\ifblank\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
   \end{beamercolorbox}%
-  \rule{0.378pt}{3.28mm}
+  % \rule{0.378pt}{3.28mm}
   \begin{beamercolorbox}[wd=70.4mm,ht=3.28mm,sep=0.2mm,leftskip=1.91mm]{}%
     \usebeamerfont{title in head/foot}\strut\insertshorttitle
   \end{beamercolorbox}%
-  \rule{0.378pt}{3.28mm}
+  % \rule{0.378pt}{3.28mm}
   \begin{beamercolorbox}[wd=18.14mm,ht=3.28mm,sep=0.2mm,leftskip=1.91mm]{}%
     \usebeamerfont{date in head/foot}\strut\insertshortdate{} %\hspace*{2em}
   \end{beamercolorbox}%
-  \rule{0.378pt}{3.28mm}
+  % \rule{0.378pt}{3.28mm}
   \begin{beamercolorbox}[wd=17.59mm,ht=3.28mm,sep=0.2mm,leftskip=1.91mm]{}%
     \usebeamerfont{page number in head/foot}\strut\usebeamertemplate{multilangpage} \insertframenumber
     % \usebeamerfont{page number in head/foot}\insertpagenumber{} %\hspace*{2em} 
   \end{beamercolorbox}}%
   %\vskip0pt%
+  \fi
 }
 
 \defbeamertemplate*{headline}{} % title is in headline space
@@ -63,15 +71,31 @@
   \end{beamercolorbox}%
   \hspace{6.05mm}
   \begin{beamercolorbox}[wd=32.75mm]{} %palette primary}
-     % \includegraphics[height=0.56cm]{htw.pdf}
-     \insertlogo
+     % \insertlogo
   \end{beamercolorbox}%
   }
   
-  {\usebeamercolor[fg]{palette secondary} \hrule width 76.60mm  }
+  {\usebeamercolor[fg]{palette primary} \hrule width 76.60mm  }
 }
 
-\setbeamersize{text margin left=1em,text margin right=1em}
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  \vspace{-15mm}
+  \usebeamercolor[fg]{titlegraphic}\hspace{-4.3mm}\inserttitlegraphic % contains protection zone
+  \vspace{5mm}
+
+  \usebeamerfont{title}\inserttitle\par
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \bigskip
+  \usebeamerfont{author}\insertauthor\par
+  \usebeamerfont{institute}\insertinstitute\par
+  \usebeamerfont{date}\insertdate\par
+  \vfill
+
+}
+
+
+\setbeamersize{text margin left=6.3mm,text margin right=6.3mm}
 
 \mode
 <all>

@@ -1,3 +1,3 @@
 %.pdf: %.md
-	pandoc -H header-htw.tex -t beamer -o $@ $<
+	pandoc -V theme:HTW  -V themeoptions:lang=en -t beamer -o $@ $<
 

@@ -4,7 +4,7 @@ Lots of improvements can be made, it does not implement the full CD and only 4:3
 How to install template
 ---------------------------
 
-This template requires the font package [opensans](https://ctan.org/texarchive/fonts/opensans) which is contained, for example, in Texlive extra fonts and can be installed with `sudo apt-get install texlive-extra-fonts`.
+This template requires the font package [opensans](https://ctan.org/texarchive/fonts/opensans) which is contained, for example, in Texlive extra fonts and can be installed with `sudo apt-get install texlive-fonts-extra` or by installing the TEX package [manually](https://askubuntu.com/questions/157812/how-do-i-install-the-latex-opensans-package).
 
 Copy the *.sty files in folder `template` to your local latex template folder, e.g. `~/texmf/tex/latex/..`. 
 
